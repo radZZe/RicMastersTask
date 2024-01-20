@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
-import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
-import ru.radzze.ricmasterstask.MainScreenViewModel
 import ru.radzze.ricmasterstask.ui.theme.BackgroundColor
 import ru.radzze.ricmasterstask.ui.theme.CirceText
 import ru.radzze.ricmasterstask.ui.theme.DividerColor
@@ -24,7 +21,7 @@ import ru.radzze.ricmasterstask.ui.theme.TittleTextColor
 
 @Composable
 fun MainScreen(
-    viewModel:MainScreenViewModel = hiltViewModel()
+    viewModel: MainScreenViewModel = hiltViewModel()
 ) {
     Column(
         modifier = Modifier
@@ -40,6 +37,7 @@ fun MainScreen(
             color = TittleTextColor
         )
         viewModel.jopa()
+        viewModel.jopa1()
         TabRow(selectedTabIndex = viewModel.selectedTabIndex,) {
             viewModel.tabList.forEachIndexed { index,item->
                 Tab(selected = index == viewModel.selectedTabIndex, onClick = {

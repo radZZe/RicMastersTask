@@ -1,12 +1,15 @@
 package ru.radzze.ricmasterstask.model
 
+import io.realm.kotlin.types.RealmObject
+import io.realm.kotlin.types.annotations.PrimaryKey
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Door(
-    val id:Int,
-    val name:String,
-    val room:String?,
-    val favorites:Boolean,
-    val snapshot:String? = null
-)
+class Door:RealmObject{
+    @PrimaryKey
+    var id:Int = 0
+    var name:String = ""
+    var room:String? = null
+    var favorites:Boolean = false
+    var snapshot:String? = null
+}
