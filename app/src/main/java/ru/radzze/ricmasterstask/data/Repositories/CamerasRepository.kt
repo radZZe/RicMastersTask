@@ -4,7 +4,7 @@ import ru.radzze.ricmasterstask.model.Camera
 import ru.radzze.ricmasterstask.model.Door
 
 interface CamerasRepository {
-    suspend fun getCameras():List<Camera>
-    fun saveCamera()
+    suspend fun getCameras():MutableMap<String,MutableList<Camera>>
+    fun saveCamera(camera:Camera)
     fun updateCamera()
 }

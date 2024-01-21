@@ -7,6 +7,8 @@ import dagger.hilt.components.SingletonComponent
 import io.ktor.client.HttpClient
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
+import io.realm.kotlin.types.RealmObject
+import io.realm.kotlin.types.TypedRealmObject
 import ru.radzze.ricmasterstask.data.Repositories.CamerasRepository
 import ru.radzze.ricmasterstask.data.Repositories.CamerasRepositoryImpl
 import ru.radzze.ricmasterstask.data.Repositories.DoorsRepository
@@ -16,6 +18,7 @@ import ru.radzze.ricmasterstask.data.Repositories.RealmRepositoryImpl
 import ru.radzze.ricmasterstask.data.RubetekHttpClient
 import ru.radzze.ricmasterstask.model.Camera
 import ru.radzze.ricmasterstask.model.Door
+import kotlin.reflect.KClass
 
 @Module
 @InstallIn(SingletonComponent::class)

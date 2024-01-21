@@ -8,8 +8,8 @@ import ru.radzze.ricmasterstask.model.Door
 interface RealmRepository {
     fun getCameras(): Flow<List<Camera>>
     fun getDoors(): Flow<List<Door>>
-    suspend fun updateCamera(camera: Camera)
+    suspend fun updateCamera(camera: Camera):Boolean
     suspend fun insertCamera(camera: Camera)
     suspend fun insertDoor(door: Door)
-    suspend fun updateDoor(door: Door)
+    suspend fun updateDoor(door: Door):Boolean
 }

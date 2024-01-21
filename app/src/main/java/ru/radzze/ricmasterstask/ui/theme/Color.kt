@@ -3,9 +3,10 @@ package ru.radzze.ricmasterstask.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val TittleTextColor = Color(51, 51, 51)
-val MainTextColor = Color(85, 85, 85, 1)
+val MainTextColor = Color(85, 85, 85,)
 val DividerColor = Color(3, 169, 244, 1)
-val BackgroundColor = Color(255, 255, 255, 255)
+val WhiteColor = Color(255, 255, 255, 255)
+val BackgroundColor = Color(246, 246, 246,)
 
 
 
